@@ -13,7 +13,19 @@
 //that, given a zero-indexed array A consisting of N integers and an integer K, returns the array A rotated K times.
 //
 //    For example, given array A = [3, 8, 9, 7, 6] and K = 3, the function should return [9, 7, 6, 3, 8].\
+//2 Inputs, an array and a rotation(number)
+//output: an array, with the numbers rearranged.
+//tools: shift, unshift, push, pop (will not need all)
+//each time loop runs, we want the last element in the array to move to the beginning
 
 function cyclicRotation(arr, rotation){
-    //Your code here...
+    for (var i = 0; i < rotation; i++){
+      var lastNum = arr.pop();
+      arr.unshift(lastNum);
+    }
+    return arr;
 }
+
+var results = cyclicRotation([2, 10, 30, 56], 3);
+console.log(results);
+cyclicRotation([2, 10, 30, 56], 30);
