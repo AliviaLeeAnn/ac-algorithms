@@ -24,7 +24,32 @@ var result = isBigger("13");
 console.log(result) // "1-3"
 
 **/
+//Input: A number
 
-function dashInsert(str) {
-	// Your code
+//Create a var to store output string
+//create var to store the transformation of the number first to a string and then to an array, tools:
+// .tostring().split("")
+
+4982
+["4", "9", "8", "2", "7"];
+//create for loop to go thru array
+//Conditional statement that tests if number and number after it are odd.
+//If true, add number with dash and the srtring
+//If false, just add number
+// function dashInsert(str) {
+	
+// }
+
+
+function dashInsert(num){
+	var stringResult = "";
+	var array = num.toString().split("");
+	for (var i = 0; i < array.length; i++){
+		if (array[i] % 2 === 1 && array[i + 1] % 2 === 1) {
+			stringResult = stringResult + array[i] + "-";
+		} else {
+			stringResult = stringResult + array[i];
+		}
+		return stringResult;
+	}
 }
