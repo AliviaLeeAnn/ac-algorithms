@@ -33,7 +33,18 @@ console.log(result) // "ghimmnorstyy"
 
 **/
 
-function alphabetSoup(str) {
-	//Your code here
-	
-}
+function alphabetSoup(str){
+	var letters = str.split("").sort().join("");
+	return letters;
+	}
+	var result = alphabetSoup("hello");
+	console.log(result);
+
+
+// function alphabetSoup(str) {
+// var letterArray = str.split();
+// letterArray.sort();
+// var newStr = letterArray.join("");
+// return newStr;
+// }
+
