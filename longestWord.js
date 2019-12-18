@@ -27,17 +27,20 @@
    //If true, I want to replace the value of the variable with the length of the longer word
 // findLongestWord("May the force be with you") should return 5.
 
-function findLongestWord(str) {
-  var longestWord;
-  for (var i = 0; i < longestWord; i++){
-    if (condition) {
-      
-    } else {
-      
-    }
-  }
-  var result = string.split(longestWord);
-  return result;
+function findAlpha(str){
+  return str.length;
 }
-console.log(result);
+findAlpha("The quick brown fox jumped over the lazy dog");
+function findAlpha(str){
+  var sentence = str.split(' ');
+  var longestWord = 0;
+  for(var i = 0; i < sentence.length; i++){
+    if(sentence[i].length > longestWord){
+  longestWord = sentence[i].length;
+}
+  }
+  return longestWord;
+}
+
+
 
