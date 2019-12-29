@@ -14,15 +14,49 @@
 			  	<li>Adjective: <input type="text" id="adjective">
 			  	<li>A Person Name: <input type="text" id="person">
 			 </ul>
-			 <button id="lib-button">Lib it!</button>
-			  
-			 <div id="story"></div>  
+             <button id="lib-button">Lib it!</button>
+             <div id="story"></div>
+             <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+             <script></script> 
 		</body>
 	</html>
-	
-<!-- 
+
+<!--
 1) Add a script tag to the bottom of the page for your code.
 2) Add an event listener to the button so that it calls a makeMadLib function when clicked.
-3)In the makeMadLib function, retrieve the current values of the form input elements, make a story from them, and output that in the story div (like "Laura really likes pink cucumbers.") -->
+3)In the makeMadLib function, retrieve the current values of the form input elements, make a story from them, and output that in the story div (like "Laura really likes good code.") -->
+
+<!-- Problems: Need to get values from the user in order to create a Mad Lib -->
+
+<!-- Step 1: User enterd the information and clicks the button -->
+
+$(document).ready(function(){
+    function makeAMadLib(){
+        var noun = $("#noun").val();
+        var adjective = $("#adjective").val();
+        var yourNameHere = $("#yourNameHere").val();
+        $("story").append("<p>" + yourNameHere + "really likes" + adjective + " " + noun + "</p>"
+        );
+        var userObject = {};
+        userObject.noun = noun;
+        userObject.adjective = adjective;
+        userObject.person = person;
+    }
+<!-- // Event listener to execute  makeMAkeLib function -->
+
+    $("lib-button").on("clcik", function(){
+    makeMadLib();
+    });
+ });
+
+<!-- Step 2: Create an event listener to be listening on the button, so that when the user clicks it, we can execute a callback function - jQuery,use .on() for click event -->
+
+<!-- Step 3: Create a function that has 3 variables for each word the user types in. Each of those variables will have the value of what the user typed in. -use jQuery .val() method. -->
+
+<!-- Step 4: Dsipaly the data in a sentence to the user- Query .append() to the div in the HTML.-->
+
+<!-- Step 5: Create a variable and set it equal to empty curly brackets. Add three key value pairs with dot notation-->
+
+<!-- Step 6: -->
 
 <!-- Bonus: Make an object with the list elements as keys and the inputs as values.  -->

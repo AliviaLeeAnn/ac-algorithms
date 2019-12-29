@@ -38,8 +38,18 @@ console.log(result) // -1
 **/
 
 
-
 function isBigger(a, b) {
-	//Your code here
-	
-}
+	if (typeof a === "number" && typeof b === "number"){
+	   if (a > b) {
+		   return true;
+	   } else if (a < b) {
+		   return false;
+	   } else {
+		   return 0;
+	   }
+   } else {
+	   return -1;
+   }
+   };
+   var result = isBigger (5,7)
+   console.log(result);
