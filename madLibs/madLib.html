@@ -2,22 +2,21 @@
 
 <!DOCTYPE html>
 	<html>
-	 	<head>
+        <head>
 	  		<meta charset="utf-8" />
 	  		<title>"My Mad Lib"</title>
-	 	</head>
-	 	
-	 	<body>
+         </head>
+         <body>
 			 <h1>Mad Libs</h1>
 			 <ul>
 			  	<li>Noun: <input type="text" id="noun">
 			  	<li>Adjective: <input type="text" id="adjective">
-			  	<li>A Person Name: <input type="text" id="person">
+			  	<li>A Person Name: <input type="text" id="yourNameHere">
 			 </ul>
              <button id="lib-button">Lib it!</button>
              <div id="story"></div>
              <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-             <script></script> 
+             <script src="./custom.js"></script>
 		</body>
 	</html>
 
@@ -28,26 +27,9 @@
 
 <!-- Problems: Need to get values from the user in order to create a Mad Lib -->
 
-<!-- Step 1: User enterd the information and clicks the button -->
+<!-- Step 1: User entered the information and clicks the button -->
 
-$(document).ready(function(){
-    function makeAMadLib(){
-        var noun = $("#noun").val();
-        var adjective = $("#adjective").val();
-        var yourNameHere = $("#yourNameHere").val();
-        $("story").append("<p>" + yourNameHere + "really likes" + adjective + " " + noun + "</p>"
-        );
-        var userObject = {};
-        userObject.noun = noun;
-        userObject.adjective = adjective;
-        userObject.person = person;
-    }
-<!-- // Event listener to execute  makeMAkeLib function -->
 
-    $("lib-button").on("clcik", function(){
-    makeMadLib();
-    });
- });
 
 <!-- Step 2: Create an event listener to be listening on the button, so that when the user clicks it, we can execute a callback function - jQuery,use .on() for click event -->
 
